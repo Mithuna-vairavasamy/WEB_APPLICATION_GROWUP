@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+<meta name="viewport"  content="width=device-width,initial-scale=1.0">
+<style>
+body{
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(fer4.jpg);
+background-size:cover;
+width:100%;
+height:100%;
+}
+ul{
+display:flex;
+position:absolute;
+right:40px;
+top:5px;
+}
+
+
+ul li{
+list-style:none;
+margin-left:62px;
+margin-top:27px;
+}
+ul li a{
+
+font-size:2vw;
+text-decoration:none;
+color:khaki;
+text-shadow:2px 2px black;
+font-weight:bold;
+font-family:arial;
+}
+
+ul li a:hover{
+border:2px solid white;
+padding:3px;
+background-color:black;
+border-top-left-radius: 6px;
+border-bottom-left-radius: 6px;
+border-top-right-radius:6px;
+border-bottom-right-radius:6px;
+}
+
+.register{
+position:absolute;
+top:20%;
+left:30%;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:transparent;
+border:2px solid palegreen;
+border-radius:5px;
+padding:30px; 
+color:white;
+align-items:center;
+}
+
+
+h1{
+text-align:center;
+color:olivedrab;
+text-shadow:2px 2px palegreen;
+}
+
+button{
+background-color:olivedrab;
+color:black;
+border: 1px soild white;
+border-radius:7px;
+padding:10px;
+margin:20px 0px;
+cursor:pointer;
+font-size:20;
+font-family:sans-serif;
+font-weight:bold;
+}
+
+.box{
+display:flex;
+float:center;
+margin-bottom:15px;
+width:100%;
+height:40px;
+margin:30px 0;
+}
+
+
+.box input{
+width:100%;
+height:100%;
+background:transparent;
+font-size:20px;
+margin-top:5px;
+border-radius:30px;
+paddig:10px;
+color:white;
+border:4px soild palegreen;
+}
+
+label{
+font-size:25px;
+}
+#img img{
+position:absolute;
+left:30px;
+top:100px;
+width:20%;
+height:40%;
+}
+
+
+@media screen and (max-width:768px)
+{
+.register{
+position:absolute;
+top:30%;
+left:10%;
+}
+#img img{
+top:10px;
+width:30%;
+height:20%;
+}
+.box input{
+width:60%;
+height:50%;
+margin-top:2px;
+font-size:10px;
+}
+ul li a{
+font-size:2vw;}
+ul li{
+margin-left:20px;}
+ul{
+right:10px;
+}
+}
+
+</style>
+</head>
+<body>
+<div class="nav">
+	<ul>	
+		<li><a href="home.html">HOME</a></li>
+		<li><a href="About.html">ABOUT</a></li>
+		<li><a href="fertilizer.html" >FERTILIZER</a></li>
+		<li><a href="contact.html">CONTACT</a></li>
+		<li><a href="login.html" id="box">LOGIN</a></li>
+	</ul>
+</div>
+<div id="img"><img src="logo1.png" ></div>
+<div class="register">
+      <form name="f1">
+      <h1>Register</h1>
+        <div class="box">
+	  <label >Username:</label>
+	 <input type="text" id="user" name="username" pattern="^[a-zA-Z]*$" required>
+        </div>
+       <div class="box">
+	<label >Email:</label>
+	<input type="email" id="email" name="email" required>
+       </div>
+       <div class="box">
+	<label >Password:</label>
+	<input type="password" id="pwd" name="pwd" required>
+        </div>
+        <div class="box">
+	<label >Confirm Password:</label>
+	<input type="password" id="cpwd" name="cpwd" required>
+       </div>
+      <p id="show"></p>
+      <center><button  onclick="register()" >REGISTER</button></center>
+</form>
+</div>
+<script>
+function register(){
+var name=document.getElementById('user').value;
+var uemail=document.getElementById('email').value;
+var pwd=document.getElementById('pwd').value;
+var cpwd=document.getElementById('cpwd').value;
+    if(name=="")
+	{
+		 document.getElementById('show').innerHTML="Please give a name!!";
+		show.style="color:red;";
+	}
+	if(uemail=="")
+	{
+		 document.getElementById('show').innerHTML="Please give a email!!";
+		show.style="color:red;";
+	}
+	if(pwd=="")
+	{
+		 document.getElementById('show').innerHTML="Please give a Password!!";
+		show.style="color:red;";
+	}
+	if(cpwd=="")
+	{
+		 document.getElementById('show').innerHTML="Please give a Confirm Password!!";
+		show.style="color:red;";
+	}
+	if(pwd==cpwd )
+	{
+	    alert("VALIDATION SUCCESSFULL");
+		location.assign("file:///E:/malu/login.html");
+	}
+    else
+	{
+		document.getElementById('show').innerHTML="Password did not match!!";
+		show.style="color:red;";
+		
+	}
+
+}
+</script>
+</body>
+</html>
+

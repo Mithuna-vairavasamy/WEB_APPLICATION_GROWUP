@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head><title>home</title>
+<meta name="viewport"  content="width=device-width,initial-scale=1.0">
+<style>
+*{
+margin:0;
+padding:0;
+}
+.logo img{
+width:15%;
+height:15%;
+}
+body{
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(fer4.jpg);
+background-size:cover;
+width:100%;
+height:100%;
+}
+
+ul{
+display:flex;
+position:absolute;
+right:20px;
+top:50px;
+}
+
+ul li{
+list-style:none;
+margin-left:62px;
+margin-top:27px;
+font-size:30px;
+}
+
+a{
+font-size:3vw;
+text-decoration:none;
+color:black;
+text-shadow:2px 2px white;
+font-weight:bold;
+font-family: "Lucida Console", "Courier New", monospace;
+}
+
+a:hover{
+border:1px soild black;
+padding:3px;
+background-color:khaki;
+border-top-left-radius: 6px;
+border-bottom-left-radius: 6px;
+border-top-right-radius:6px;
+border-bottom-right-radius:6px;
+}
+
+
+#quote{
+position:absolute;
+left:45px;
+top:350px;
+font-family:papyrus;
+font-size:40px;
+font-weight:bold;
+color:lightgreen;
+}
+
+.col{
+position:absolute;
+right:30px;
+top:310px;
+}
+h5{
+font-family:"Times New Roman", Times, serif;
+font-size:30px;
+text-transform:capitalize;
+color:chartreuse;
+text-shadow:2px 2px black;
+}
+
+.fer{
+width:200px;
+height:230px;
+display:inline-block;
+padding:30px;
+border-radius:10px;
+box-sizing:border-box;
+cursor:pointer;
+margin:10px 15px;
+background-position:center;
+background-size:cover;
+trasition:transform 0.5s;
+}
+.fer:hover{
+transform:translateY(-15px);
+}
+
+
+.fer2{
+background-image:url(fer__2.png);
+}
+.fer3{
+background-image:url(fer__3.png);
+}
+.fer4{
+background-image:url(fer__4.png);
+}
+
+
+@media screen and (max-width:768px)
+{
+body{
+background-size:cover;
+}
+ul li{
+margin-left:20px;
+margin-top:27px;
+}
+a{
+font-size:3vm;}
+.fer{
+width:100px;
+height:130px;
+}
+h5{
+font-size:20px;
+}
+#quote{
+position:absolute;
+left:20px;
+top:150px;
+font-size:15px;
+}
+.col{
+position:absolute;
+right:10px;
+top:220px;
+
+}}
+</style>
+</head>
+<body>
+<script>
+function fn(){
+var a=prompt("ARE YOU ABLE TO ACCESS OUR PAGE?");
+if(a=="yes")
+{
+window.alert("Thank You for your respond");
+}
+}
+
+function log(){
+var b=prompt("Are you registerd our webpage");
+if(b=="yes"){
+window.location.assign("file:///F:/java-project/malu/login.html");
+}
+else
+{
+window.location.assign("file:///F:/java-project/malu/register.html");
+}
+}
+</script>
+<div class="main">
+<div class="logo"><img src="logo1.png"></div>
+<div>
+	<ul>	
+		<li><a href="home.html">HOME</a></li>
+		<li><a href="About.html">ABOUT</a></li>
+		<li><a href="fertilizer.html" onclick="log()" >FERTILIZER</a></li>
+		<li><a href="contact.html">CONTACT</a></li>
+		<li><a href="login.html" id="box">LOGIN</a></li>
+	</ul>
+</div>
+<p id="quote">"CULTIVATING<br>IDEAS<br>FOR GROWING...!!"</p>
+<div class="col">
+	<div class="fer fer2">
+	<h5 onmouseover="fn()">Fertilizer</h5> 
+	</div>
+	<div class="fer fer3">
+	<h5 onmouseover="fn()">Seeds</h5>
+	</div>
+	<div class="fer fer4">
+	<h5 onmouseover="fn()">Plant</h5>
+	</div>
+	
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>login page</title>                      
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+body{
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(fer4.jpg);
+background-size:cover;
+width:100%;
+height:100%;
+}
+
+
+
+.register{
+position:absolute;
+top:25%;
+left:40%;
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:transparent;
+border:2px solid palegreen;
+border-radius:5px;
+padding:30px; 
+color:white;
+align-items:center;
+}
+
+
+h1{
+text-align:center;
+color:white;
+font-size:30px;
+font-weight:bold;
+}
+
+
+
+.box{
+display:flex;
+float:center;
+margin-bottom:15px;
+}
+
+
+.box input{
+background:transparent;
+font-size:20px;
+margin-top:5px;
+border-radius:30px;
+paddig:10px;
+color:white;
+padding:10px;
+border:4px soild palegreen;
+}
+.log{
+padding:10px;
+background:white;
+border:none;
+border-radius:40px;
+cursor:pointer;
+font-size:16px;
+color:saddlebrown;
+font-weight:bold;
+}
+
+#img img{
+position:absolute;
+left:30px;
+top:100px;
+width:20%;
+height:40%;
+}
+
+.register-link p a{
+font-size:20px;
+margin-top:10px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+.register-link p a:hover{
+color:red;
+text-decoration:underline;
+}
+ 
+ul{
+display:flex;
+position:absolute;
+right:20px;
+top:20px;
+}
+
+ul li{
+list-style:none;
+margin-left:62px;
+margin-top:27px;
+}
+ul li a{
+
+font-size:2vw;
+text-decoration:none;
+color:khaki;
+text-shadow:2px 2px black;
+font-weight:bold;
+font-family:arial;
+}
+
+ul li a:hover{
+border:2px solid white;
+padding:3px;
+background-color:black;
+border-top-left-radius: 6px;
+border-bottom-left-radius: 6px;
+border-top-right-radius:6px;
+border-bottom-right-radius:6px;
+}
+
+@media screen and(max-width:768px){
+#img img{
+left:10px;
+width:30%;
+height:20%;
+}
+
+h1{
+font-size:20px;
+}
+.register{
+position:absolute;
+top:30%;
+left:5%;
+}
+ul li  a{
+font-size:2vw;
+}
+ul li{
+margin-left:10px;
+}
+ul{
+right:10px;
+}
+
+}
+
+</style>
+</head>
+<body>
+<div class="nav">
+	<ul>	
+		<li><a href="home.html">HOME</a></li>
+		<li><a href="About.html">ABOUT</a></li>
+		<li><a href="fertilizer.html" >FERTILIZER</a></li>
+		<li><a href="contact.html">CONTACT</a></li>
+		<li><a href="login.html" id="box">LOGIN</a></li>
+	</ul>
+</div>
+<div id="img"><img src="logo1.png"></div>
+<div class="register">
+      <form name="f1">
+      <h1>LOGIN</h1>
+        <div class="box">
+	 <input type="text" id="user" name="username" placeholder="Username" required> 
+        </div>
+       <div class="box">
+	<input type="password" id="pwd" name="password" placeholder="Password" required>
+        </div>
+      <center><button  class="log" onclick="login()" >LOGIN</button></center>
+<div class="register-link">
+<p id="b"></p>
+        <center><p>Don't have an account?<a href="register.html">Register</a></p></center>
+</div>
+</form>
+</div>
+<script>
+var b=prompt("CONFORM MESSAGE: HAVE YOU REGISTERD");
+if(b=="yes"){
+document.getElementById('b').innerHTML="THANK YOU";
+b.style="color:green;";
+}
+else{
+location.assign("file:///E:/malu/register.html");
+}
+function login(){
+var uname=document.getElementById('user').value;
+var upwd=document.getElementById('pwd').value;
+
+ if(uname=="mithuna")
+ {
+ if(upwd=="123"){
+  alert("VALIDATION SUCCESSFULL");
+  location.assign("file:///F:/java-project/malu/home.html");
+ }
+ else{
+ alert("enter the valid password");
+ }
+ }
+ else
+ {
+ alert("enter the valid username and password");
+ }
+}
+</script>
+</body>
+</html>

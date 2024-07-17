@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>blacksoil</title>
+<meta name="viewport" content="width=device-width,intial-scale=1.0">
+<style>
+body{
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(black.jpg);
+background-size:cover;
+}
+h1{
+font-family:lucida handwriting;
+font-size:40;
+font-weight:bold;
+text-shadow:3px 3px black;
+color:yellow;
+float:left;
+}
+.black img{
+position:absolute;
+top:100px;
+left:50px;
+width:400px;
+height:300px;
+border:4px double white;
+border-radius:60%;
+box-shadow:6px 6px  white;
+}
+
+.black img:hover{
+transform:translateY(20px);
+}
+.list{
+border:2px solid white;
+box-shadow:6px 6px black;
+position:absolute;
+top:120px;
+right:100px;
+text-transform:capitalize;
+padding:4px;
+background-color:black;
+}
+ol li{
+list-style:circle;
+margin-left:20px;
+margin-top:10px;
+font-family:sans-serif;
+font-size:30px;
+color:khaki;
+}
+h2{
+color:white;
+font-size:40;
+margin-left:5px;
+}
+.content{
+border:1px solid white;
+padding:8px;
+position:absolute;
+top:600px;
+left:150px;
+color:white;
+font-size:25px;
+background-color:black;
+}
+@media screen and (max-width:768px){
+.black img{
+width:30%;
+height:30%;
+}
+.black img:hover{
+transform:translateY(20px);
+}
+
+.list{
+    padding:3px;
+	top:340px;
+	left:20px;
+	margin-top:20px
+	font-size:15px;
+}
+ol li{
+font-size:15px;
+}
+
+.content{
+    font-size:15px;
+    top: 640px;
+	left:20px;
+	margin-top:10px;
+	margin-right:10px;
+}
+}
+</style>
+</head>
+<body>
+<h1>BLACK SOIL</h1>
+<div class="black"><img src="black.jpg"></div>
+<div class="list">
+<h2>Crops grown in black soil are</h2>
+<ol>
+<li>sugar cane</li>
+<li>wheat</li>
+<li>jawar</li>
+<li>rice</li>
+<li>citrus fruits</li>
+<li>sunflower</li>
+<li>linseed</li>
+</ol>
+</div>
+<div class="content">
+*The Organic fertilizer that is composed of straw compost,chicken manure,cattle manure and sheep manure.<br><br>
+Green manure is <b style="color:yellow"> BEST ORGANIC FERTILIZER</b><br><br>
+*Inorganic fertilizer that are used Nitrogen (N) at a triple quantity compared to Potassium (K) <br><br>
+Range for fertilizer is <b style="color:yellow"> N-P-K 150-0-50</b>
+</div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head><title>Contact Us</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+body
+{
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(ban1.jpg);
+background-size:cover;
+}
+h1{
+font-family:papyrus;
+font-size:20px;
+color:khaki;
+text-shadow:2px 2px black;
+word-spacing:2px;
+}
+
+.p{
+font-family:papyrus;
+color:khaki;
+font-weight:bold;
+}
+
+.contactinfo{
+margin-left:400px;
+margin-top:150px;
+background-color:transparent;
+border:4px;
+padding:30px; 
+}
+.feed {
+color:white;
+border:2px solid white;
+padding:10px;
+font-size:20px;
+width:25%;
+}
+
+.feed a{
+text-decoration:none;
+}
+
+ p{
+color:white;
+font-size:25px;
+}
+
+.form{
+margin-top:150px;
+background-color:transparent;
+border:4px ridge gray;
+border-radius:5px;
+padding:30px; 
+color:white;
+}
+
+
+ul{
+display:flex;
+position:absolute;
+right:50px;
+top:10px;
+}
+
+ul li{
+list-style:none;
+margin-left:62px;
+margin-top:27px;
+}
+
+ul li a{
+font-size:2vw;
+text-decoration:none;
+color:khaki;
+text-shadow:2px 2px black;
+font-weight:bold;
+font-family: "Lucida Console", "Courier New", monospace;
+}
+
+ul li a:hover{
+text-decoration:underline;
+}
+
+ img{
+width:30px;
+height:30px;
+}
+#img img{
+position:absolute;
+left:30px;
+top:100px;
+width:20%;
+height:40%;
+}
+@media(max-width:768px){
+#img img{
+top:100px;
+width:20%;
+height:15%;
+}
+.box1  p{
+font-size:15px;
+}
+ul{
+right:10px;
+}
+
+ul li{
+margin-left:20px;
+margin-top:27px;
+}
+ul li a{
+font-size:2vw;
+}
+.contactinfo{
+margin-left:30px;
+margin-top:230px;
+}
+}
+
+</style>
+</head>
+<body>
+<div>
+	<ul>	
+		<li><a href="home.html">HOME</a></li>
+		<li><a href="About.html">ABOUT</a></li>
+		<li><a href="fertilizer.html">FERTILIZER</a></li>
+		<li><a href="contact.html">CONTACT</a></li>
+		<li><a href="login.html" id="box">LOGIN</a></li>
+	</ul>
+</div>
+<div id="img"><img src="logo1.png" ></div>
+<div class="contactinfo">
+<tr>
+	<th>
+	     <p class="p"><img src="ad.png">Addresse</p>
+	    <p>  Buliding no:144,Pandit nagar,Alwarpet,<br>Chennai-600002</p>
+      </th><th>
+	     <p class="p"><img src="phno1.png">Phone</p>
+	     <p>[MONDAY TO FRIDAY]&nbsp;&nbsp;&nbsp; [10AM TO 5PM]<br>
+	     PhoneNo:9361030271<br>LandLine:044-1234567</p>
+       </th>
+	<th><
+	     <p class="p"><img src="email.png">Email</p>
+	     <p>grow_up@gmail.com</p>
+       </th>
+      <th> 
+	     <p class="p"><img src="instagram.png">Instagram</p>  
+	     <p>grow_up_.</p>  
+      </th></tr>
+	   <div class="feed">Give Your <a href="feed.html">FEEDBACK</a></div>
+ </div>
+
+<script>
+function fn(){
+var reg=prompt("HAVE YOU REGISTERED OUR SITE");
+if(reg=="yes")
+{
+window.location.assign("file:///Y:/malu/login.html");
+}
+else
+{
+window.location.assign("file:///Y:/malu/register.html");
+}
+}
+
+function send(){
+var ans=prompt("ARE YOU SURE WANT TO SUBMIT FEEDBACK");
+if(ans=="yes")
+{
+  document.getElementById('show').innerHTML="THANK YOU!! SUBMITTED YOUR FEEDBACK!!";
+	show.style="color:green;";
+}
+}
+</script>
+</body>
+</html>

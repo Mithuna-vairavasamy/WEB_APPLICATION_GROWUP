@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>buy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(fertilizer.jpg);
+background-size:cover;
+width:100%;
+height:60%;
+}
+.text{
+color:white;
+font-size:20px;
+}
+.text input{
+text-align:center;
+color:black;
+background-color:lightblue;
+font-size:20px;
+padding:3px;
+font-weight:bold;
+}
+.cart{
+margin-top:20px;
+border:3px ridge purple;
+background-color:white;
+color:black;
+padding:20px;
+text-transform:capitalize;
+width:50%;
+height:10%;
+font-size:20px;
+font-weight:bold;
+}
+.box{
+border:1px solid black;
+color:black;
+background-color:khaki;
+padding:5px;
+}
+.image button{
+font-size:20px;
+color:black;
+font-weight:bold;
+padding:10px;
+background-color:khaki;
+width:150px;
+margin-top:10px;
+}
+.heading{
+	text-align:center;
+	padding:20px 30px;
+	color:palegreen;
+	text-transform:uppercase;
+	text-shadow:2px 2px black;
+	font-size:70px;
+}
+.image-container{
+	display:flex;
+	justify-content:center;
+	background-color:transparent;
+	margin-right:30px;
+	padding:20px;
+	flex-wrap:wrap;
+	gap:10px;
+
+}
+.image-container .image{
+	padding:15px;
+	background-color:black;
+	border:2px solid white;
+	margin: 1px 1px 1px 1px
+	width:350px;
+	border-radius:20px;
+}
+.image-container .image img{
+	height:270px;
+	width:100%;
+	margin-bottom:10px;
+	
+}
+.image-container .image p{
+	text-align:center;
+	color:white;
+	font-size:20px;
+}
+
+button{
+font-size:25px;
+color:black;
+font-weight:bold;
+padding:15px;
+	background-color:lightblue;
+	height:60px;
+	width:100px;
+}
+a{
+text-decoration:none;
+color:black;
+}
+
+@media screen and(max-width:768px){
+
+	
+}
+}
+</style>
+</head>
+<body>
+<h1 class="heading">BUY NOW</h1>
+<div class="image-container">
+<div class="image">
+	<img src="nitrogen.jpg">
+	<p id="item1">Nitrogen Fertilizer (PER KG) </p>
+	<div class="text"><center>Rs&nbsp; <input type="text" value="350" id="price1" size="1px" readonly></center></div>
+	<p>Qty<input type="number"  id="qty1" min=1 max=5></p>
+	<center><button onclick="cart1()">ADD TO CART</button></center>
+	</div>
+
+<div class="image">
+	<img src="phro.jpg">
+	<p id="item2">PHROPHSOURUS FERTILIZER PER KG</p>
+	<div class="text"><center>Rs&nbsp; <input type="text" value="250" id="price2" size="1px" readonly></center></div>
+	<p>Qty<input type="number"  id="qty2" min=1 max=5></p>
+	<center><button onclick="cart2()">ADD TO CART</button></center>
+	</div>
+
+<div class="image">
+	<img src="pota.jpg">
+	<p id="item3">POTASSIUM PER KG</p>
+	<div class="text"><center>Rs&nbsp; <input type="text" value="350" id="price3" size="1px" readonly></center></div>
+	<p>Qty<input type="number"  id="qty3" min=1 max=5></p>
+	<center><button onclick="cart3()">ADD TO CART</button></center>
+	</div></div>
+<div class="image-container">
+<div class="image">
+	<img src="cow.jpg">
+	<p id="item4">COW DUNG MANURE PER KG</p>
+	<div class="text"><center>Rs&nbsp; <input type="text" value="100" id="price4" size="1px" readonly></center></div>
+	<p>Qty<input type="number"  id="qty4" min=0 max=5></p>
+	<center><button onclick="cart4()">ADD TO CART</button></center>
+	</div>
+
+<div class="image">
+	<img src="chicken.jpg">
+	<p id="item5">CHICKEN MANURE PER KG</p>
+	<div class="text"><center>Rs&nbsp; <input type="text" value="50" id="price5" size="1px" readonly></center></div>
+	<p>Qty<input type="number"  id="qty5" min=1 max=5></p>
+	<center><button onclick="cart5()">ADD TO CART</button></center>
+	</div>
+
+<div class="image">
+	<img src="farm.jpg">
+	<p id="item6">FARMYARD MANURE PER KG</p>
+	<div class="text"><center>Rs&nbsp; <input type="text" value="150" id="price6" size="1px" readonly></center></div>
+	<p>Qty<input type="number"  id="qty6" min=1 max=5></p>
+	<center><button onclick="cart6()">ADD TO CART</button></center>
+	</div>
+</div>
+<center><button onclick="buy()">BUY</button></center>
+	<center><div class="cart">
+	<div class="box">ADD TO CART</div>
+	<p id="amount1"></p>
+	<p id="amount2"></p>
+	<p id="amount3"></p><p id="amount4"></p><p id="amount5"></p><p id="amount6"></p><br><br>
+	<p id="amount"></p>
+	<button onmouseover="pay()"><a href="pay.html">PAY</a></button>
+	</div></center>
+<script>
+
+function pay(){
+var ans=document.getElementById('amount');
+var a=ans.textContent;
+if(a==""){
+alert("KINDLY CLIKC ON THE BUY BUTTON ");
+
+}
+else{
+}
+}
+
+function buy()
+{
+	var p1=document.getElementById('price1').value;
+	var p2=document.getElementById('price2').value;
+	var p3=document.getElementById('price3').value;
+	var p4=document.getElementById('price4').value;
+	var p5=document.getElementById('price5').value;
+	var p6=document.getElementById('price6').value;
+	
+	var a1=document.getElementById('qty1').value;
+	var a2=document.getElementById('qty2').value;
+	var a3=document.getElementById('qty3').value;
+	var a4=document.getElementById('qty4').value;
+	var a5=document.getElementById('qty5').value;
+	var a6=document.getElementById('qty6').value;
+	var total=0;
+	if(a1!="")
+	{
+	total+=parseInt(a1)*parseInt(p1);
+	}
+	if(a2!="")
+	{
+	total+=parseInt(a2)*parseInt(p2);
+	}
+	if(a3!="")
+	{
+	total+= parseInt(a3)*parseInt(p3);
+	}
+	if(a4!="")
+	{
+	total+= parseInt(a4)*parseInt(p4);
+	}
+	if(a5!="")
+	{
+	total+= parseInt(a5)*parseInt(p5);
+	}
+	if(a6!="")
+	{
+	 total+= parseInt(a6)*parseInt(p6);
+	}
+	document.getElementById('amount').innerHTML=("TOTAL AMOUNT FOR PRODUCT:-"+total);
+
+}
+
+function cart1(){
+var pro=document.getElementById('item1');
+var i = pro.textContent;
+var pr=document.getElementById('price1').value;
+var q=document.getElementById('qty1').value;
+var t=(parseInt(pr)*parseInt(q));
+if(q!=""){
+document.getElementById('amount1').innerHTML=(i+"    "+pr+"   "+q+"   "+t);
+}
+else{
+alert("kindly give the qty");
+}
+}
+
+
+function cart2(){
+var pro=document.getElementById('item2');
+var i = pro.textContent;
+var pr=document.getElementById('price2').value;
+var q=document.getElementById('qty2').value;
+var t=(parseInt(pr)*parseInt(q));
+if(q!=""){
+document.getElementById('amount2').innerHTML=(i+"    "+pr+"   "+q+"   "+t);
+}
+else{
+alert("kindly give the qty");
+}
+}
+
+function cart3(){
+var pro=document.getElementById('item3');
+var i = pro.textContent;
+var pr=document.getElementById('price3').value;
+var q=document.getElementById('qty3').value;
+var t=(parseInt(pr)*parseInt(q));
+if(q!=""){
+document.getElementById('amount3').innerHTML=(i+"    "+pr+"   "+q+"   "+t);
+}
+else{
+alert("kindly give the qty");
+}
+}
+
+
+
+
+function cart4(){
+var pro=document.getElementById('item4');
+var i = pro.textContent;
+var pr=document.getElementById('price4').value;
+var q=document.getElementById('qty4').value;
+var t=(parseInt(pr)*parseInt(q));
+if(q!=""){
+document.getElementById('amount4').innerHTML=(i+"    "+pr+"   "+q+"   "+t);
+}
+else{
+alert("kindly give the qty");
+}}
+
+
+function cart5(){
+var pro=document.getElementById('item5');
+var i = pro.textContent;
+var pr=document.getElementById('price5').value;
+var q=document.getElementById('qty5').value;
+var t=(parseInt(pr)*parseInt(q));
+if(q!=""){
+document.getElementById('amount5').innerHTML=(i+"    "+pr+"   "+q+"   "+t);
+}
+else{
+alert("kindly give the qty");
+}
+}
+function cart6(){
+var pro=document.getElementById('item6');
+var i = pro.textContent;
+var pr=document.getElementById('price6').value;
+var q=document.getElementById('qty6').value;
+var t=(parseInt(pr)*parseInt(q));
+if(q!=""){
+document.getElementById('amount6').innerHTML=(i+"    "+pr+"   "+q+"   "+t);
+}
+else{
+alert("kindly give the qty");
+}
+}
+</script>
+</body>
+</html>
+
+
